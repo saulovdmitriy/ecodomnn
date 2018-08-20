@@ -1,0 +1,37 @@
+{
+  "name": "ecopdomnn",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.1",
+    "fancybox": "^3.3.5",
+    "slick-carousel": "^1.8.1",
+    "fontawesome": "font-awesome#^5.1.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/js/bootstrap.min.js",
+        "./dist/css/bootstrap.min.css"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "./slick/slick.scss",
+        "./slick/slick-theme.scss",
+        "./slick/slick.min.js",
+        "./slick/fonts/*.*"
+      ]
+    }
+  }
+}
