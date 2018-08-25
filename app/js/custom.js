@@ -1,5 +1,6 @@
-$(document).ready(function () {
+/*===============Скрипт счётчика цифр==============*/
 
+$(document).ready(function () {
     var show = true;
     var countbox = ".numbers__inner";
     $(window).on("scroll load resize", function () {
@@ -19,5 +20,29 @@ $(document).ready(function () {
             show = false;
         }
     });
+});
 
+/*===============Скрипт прокрутки вверх==============*/
+
+  $(document).ready(function(){
+    $("a[href*='#menu']").on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
+});
+
+/*===============Скрипт активной ссылки в меню==============*/
+
+$(document).ready(function(){
+    $('.t-nav__items li a').each(function () {
+        var location = window.location.href;
+        var link = this.href; 
+        if(location == link) {
+            $(this).addClass('active');
+        }
+    });
 });
